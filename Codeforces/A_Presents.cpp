@@ -7,8 +7,8 @@ cin.tie(NULL);
 
 int n,i;
 cin>>n;
-int *a= new int(n);
-int *s= new int(n);
+vector<int> a(n);
+vector<int> s(n);
 
 for(i=0; i<n; i++)
 {
