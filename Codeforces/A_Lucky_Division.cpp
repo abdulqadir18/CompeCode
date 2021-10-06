@@ -7,11 +7,11 @@ cin.tie(NULL);
 
 int n;
 cin>>n;
-int flag=0;
-for(int i=4; i<=n;i++)
+int flag=0,i;
+for( i=1; i<=n;i++)
 {
   int j=i;
-  while(i!=0)
+  while(j!=0)
   {
     if(j%10!=4 && j%10!=7){
       flag=1;
@@ -28,10 +28,9 @@ for(int i=4; i<=n;i++)
       }
   }
 
-  if(flag==1 && i==n)
-   cout<<"NO"; 
-
 }
+if(flag==1)
+   cout<<"NO"; 
 
 return 0;
 }
