@@ -10,6 +10,7 @@ cin>>n;
 int flag=0,i;
 for( i=1; i<=n;i++)
 {
+  flag=0;
   int j=i;
   while(j!=0)
   {
