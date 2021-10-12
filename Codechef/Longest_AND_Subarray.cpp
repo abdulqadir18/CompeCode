@@ -86,16 +86,18 @@
 //   cin>>n;
 //   int max=1;
 //   long cnt=0;
-
+//   long m=0;
 //   for(int i=0; i<n; i++)
 //   {
 //     if((max&i)!=0)
 //     {
-//       max=max&i;
-//       cnt++;    
+//       if(m>cnt)
+//         m=cnt;
 //     }
+//     else
+//       cnt=0;
 //   }
-//   cout<<n-cnt<<"\n";
+//   cout<<m<<"\n";
 // }
 
 // return 0;
