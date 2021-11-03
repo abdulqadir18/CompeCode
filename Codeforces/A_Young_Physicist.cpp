@@ -1,22 +1,34 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 int main()
 {
-  int f1[3],f2[3],f3[3];
-  for(int i=0;i<3;i++)
-  {
-    cin>>f1[i]>>f2[i]>>f3[i];
-  }
-  int s1=0,s2=0,s3=0;
-  for(int i=0;i<3;i++)
-  {
-    s1+=f1[i];
-    s2+=f2[i];
-    s3+=f3[i];
-  }
+ios_base::sync_with_stdio(false);
+cin.tie(NULL);
 
-  if(s1==0 && s2==0 && s3==0)
-    cout<<"YES";
-  else
-    cout<<"NO";
+int n;
+cin>>n;
+vector <int> x(n),y(n),z(n);
+for(int i=0; i<n; i++)
+{
+  cin>>x[i]>>y[i]>>z[i];
+}
+
+int sumX=0,sumY=0,sumZ=0;
+for(int i=0; i<n; i++)
+{
+  sumX+=x[i];
+  sumY+=y[i];
+  sumZ+=z[i];
+}
+
+if(sumX==0 && sumY==0 && sumZ==0)
+{
+  cout<<"YES\n";
+}
+else
+{
+  cout<<"NO\n";
+}
+
+return 0;
 }
