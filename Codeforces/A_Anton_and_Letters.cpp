@@ -4,34 +4,33 @@ int main()
 {
 ios_base::sync_with_stdio(false);
 cin.tie(NULL);
+typedef long long ll;
 
-string s;
-cin>>s;
-int n=s.size();
-string a;
-int m=0;
-if(n<=2)
+vector <string> s;
+string i;
+while(cin>>i)
 {
-  cout<<0;
-  return 0;
+  s.push_back(i);
 }
-else
+set <char> m;
+for(int i=0; i<s.size(); i++)
 {
-  int count=0;
-  for(int i=1; i<=n-2; i=i+2)
+  int x;
+  if(i==0)
   {
-    int x= a.find(s[i]);
-    if(true)
-    {
-      count++;
-    }
-    else
-    {
-      a[m++]=s[i];
-    }
+    x=s[0][1];
   }
-  cout<<count;
+  
+  else
+  {
+    x=s[i][0];
+  }
 
+  if(x>='a' && x<='z')
+  {
+    m.insert(x);
+  }
 }
+cout<<m.size();
 return 0;
 }
