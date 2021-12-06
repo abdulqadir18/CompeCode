@@ -4,26 +4,34 @@ int main()
 {
 ios_base::sync_with_stdio(false);
 cin.tie(NULL);
+typedef long long ll;
 
-long t;
+ll t;
 cin>>t;
 while(t--)
 {
-  int n;
+  ll n;
   cin>>n;
   string s;
   cin>>s;
-  char c='0';
-
-  for(int i=0; i<n-1; i++)
+ 
+  ll cnt=0;
+  for(ll i=0; i<n; i++)
   {
-    if(s[i]!=0)
-      c=c + s[i] + '1';
+    int x=s[i]-48;
+    if(x!=0)
+    {
+      if(i==n-1)
+      {
+        cnt+=x;
+      }
+      else
+      {
+        cnt=cnt+x+1;
+      }
+    }
   }
-  if(s[n-1]!=0)
-    c=c + s[n-1];
-
-  printf("%d\n",c);
+  cout<<cnt<<"\n";
 }
 
 return 0;

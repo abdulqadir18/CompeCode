@@ -9,6 +9,7 @@ typedef long long ll;
 ll n;
 cin>>n;
 string s=to_string(n);
+cout<<s;
 ll l=s.size();
 
 if(l==1)
@@ -50,13 +51,37 @@ else
   {
     for(ll i=0; i<l-2; i+=3)
     {
-      string x= s[i]+s[i+1]+s[i+2];
+      string x;
+      x=s[i]+s[i+1]+s[i+2];
       if(x!="111" && x!="114" && x!="141" && x!="144")
       {
        cout<<"NO";
        return 0;
       }
     }
+  }
+
+  else if(l%3==1)
+  {
+    for(ll i=0; i<l-3; i+=3)
+    {
+      string x;
+      x=s[i]+s[i+1]+s[i+2];
+      if(x!="111" && x!="114" && x!="141" && x!="144")
+      {
+       cout<<"NO";
+       return 0;
+      }
+    }
+    if(s[l-1]!='1' && s[l-1]!='4')
+    {
+      cout<<"NO";
+      return 0;
+    }
+  }
+  else
+  {
+    
   }
 }
 
