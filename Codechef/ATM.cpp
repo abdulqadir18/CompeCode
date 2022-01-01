@@ -22,3 +22,27 @@ int main() {
         cout<<i_balance;
 	return 0;
 }
+// #include <iostream>
+// #include<iomanip>
+// using namespace std;
+
+// int main() {
+//     // your code goes here
+//     int r;
+//     cin >> r;
+//     float balance;
+//     cin >> balance;
+    
+//     float amount;
+    
+//     if (r%5==0 && r<balance ){
+//         amount = float(balance - r - 0.5);
+//         cout << fixed;
+//         cout << setprecision(2) << amount;
+//     }
+//     else {
+//         cout<< fixed;
+//         cout << setprecision(2) << balance;
+//     }
+//     return 0;
+// }
