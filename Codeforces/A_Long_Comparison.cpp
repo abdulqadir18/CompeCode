@@ -6,36 +6,39 @@ ios_base::sync_with_stdio(false);
 cin.tie(NULL);
 typedef long long ll;
 
-ll n;
-cin>>n;
-vector <ll> x1(n),x2(n),p1(n),p2(n);
-for(ll i=0; i<n; i++)
+ll t;
+cin>>t;
+while(t--)
 {
-  cin>>x1[i]>>p1[i]>>x2[i]>>p2[i];
-}
+  ll x1,p1,x2,p2;
+  cin>>x1>>p1>>x2>>p2;
+  ll q1=floor(log10(x1)+1);
+  ll q2=floor(log10(x2)+1);
 
-for(ll i=0; i<n; i++)
-{
-  ll n1=p1[i]+floor(log10(x1[i])+1);
-  ll n2=p2[i]+floor(log10l(x2[i])+1);
-  
-  if(n1>n2)
+  if(q1+p1>q2+p2)
   {
     cout<<">\n";
   }
-  else if(n1<n2)
+  else if(q1+p1<q2+p2)
   {
     cout<<"<\n";
   }
   else
   {
-    ll z1=x1[i]/pow(10,floor(log10(x1[i])+1)-1);
-    ll z2=x2[i]/pow(10,floor(log10(x2[i])+1)-1);
-    if(z1>z2)
+    if(q1>q2)
+    {
+      x2=x2*pow(10,q1-q2);
+    }
+    else if(q1<q2)
+    {
+      x1=x1*pow(10,q2-q1);
+    }
+
+    if(x1>x2)
     {
       cout<<">\n";
     }
-    else if(z1<z2)
+    else if(x1<x2)
     {
       cout<<"<\n";
     }
