@@ -12,13 +12,14 @@ while(t--)
 {
   ll n;
   cin>>n;
-  if(n%2!=0)
+  for(ll i=2; i<=29; i++)
   {
-    cout<<1<<"\n";
-  }
-  else
-  {
-    ll x=n;
+    ll k=(1<<i)-1;
+    if(n%k==0)
+    {
+      cout<<n/k<<"\n";
+      break;
+    }
   }
 }
 

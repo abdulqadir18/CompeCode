@@ -25,50 +25,37 @@ for(ll i=0; i<m; i++)
 sort(a.begin(),a.end());
 for(ll i=0; i<m; i++)
 {
-  // cout<<i;
   
   if(a[0]>q[i])
   {
     cout<<0<<"\n";
   }
-  else if(a[n-1]<=q[i])
-  {
-    cout<<n<<"\n";
-  }
   else
   {
-    ll lo=0, hi=n-1, mid;
-    ll flag=0;
-    while(lo<hi && flag!=1)
+    ll lo=0, hi=n, mid=0, flag=0;
+    while(lo<hi)
     {
-      mid=(hi-lo)/2+lo;
-
-      if(a[mid]==q[i])
+      mid=(hi+lo)/2;
+      if(a[mid]>q[i])
       {
-        cout<<mid+1<<"\n";
-        flag=1;
-      }
-      else if(a[mid]<q[i])
-      {
-        lo=mid+1;
-        flag=2;
+        hi=mid;
+        flag=0;
       }
       else
       {
-        hi=mid-1;
-        flag=3;
+        lo=mid+1;
+        flag=1;
       }
     }
-    if(flag==2)
+    if(flag==0 && mid<n)
     {
-      cout<<hi<<"\n";
+      cout<<mid<<"\n";
     }
-    else if(flag==3)
+    else
     {
-      cout<<hi+1<<"\n";
+      cout<<mid+1<<"\n";
     }
   }
-
 }
 
 return 0;
