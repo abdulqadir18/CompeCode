@@ -17,31 +17,21 @@ while(t--)
   {
     cin>>a[i];
   }
-  string s;
-  cin>>s;
-  
-  ll x=count(s.begin(),s.end(),'0');
 
-  vector<ll>ans(n);
+  ll sum=0;
   for(ll i=0; i<n; i++)
   {
-    if((s[i]=='0' && a[i]<=x) || (s[i]=='1' && a[i]>x))
-    {
-      ans[i]=a[i];
-    }
+    sum+=a[i];
   }
-  for(ll i=0; i<n; i++)
+
+  if(sum%n==0)
   {
-    if(ans[i]!=0)
-    {
-      continue;
-    }
-    else if(s[i]=='1')
-    {
-      
-    }
+    cout<<0<<"\n";
   }
-  cout<<"\n";
+  else
+  {
+    cout<<1<<"\n";
+  }
 }
 
 return 0;

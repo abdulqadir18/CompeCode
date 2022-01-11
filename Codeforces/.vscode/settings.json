@@ -5,6 +5,7 @@
     "numeric": "cpp",
     "string": "cpp",
     "vector": "cpp",
-    "xtree": "cpp"
+    "xtree": "cpp",
+    "xstring": "cpp"
   }
 }
