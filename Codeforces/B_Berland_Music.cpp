@@ -19,27 +19,38 @@ while(t--)
   }
   string s;
   cin>>s;
-  
-  ll x=count(s.begin(),s.end(),'0');
 
-  vector<ll>ans(n);
+  vector<ll>like,dislike,ans(n);
   for(ll i=0; i<n; i++)
   {
-    if((s[i]=='0' && a[i]<=x) || (s[i]=='1' && a[i]>x))
+    if(s[i]=='0')
     {
-      ans[i]=a[i];
+      dislike.push_back(a[i]);
+    }
+    else
+    {
+      like.push_back(a[i]);
     }
   }
+
+  sort(like.begin(),like.end());
+  sort(dislike.begin(),dislike.end());
+  
+  ll l=dislike.size()+1, d=1;
+  for(ll i=0; i<like.size(); i++)
+  {
+    ans[like[i]]=l;
+    l++;
+  }
+  for(ll i=0; i<dislike.size(); i++)
+  {
+    ans[dislike[i]]=d;
+    d++;
+  }
+
   for(ll i=0; i<n; i++)
   {
-    if(ans[i]!=0)
-    {
-      continue;
-    }
-    else if(s[i]=='1')
-    {
-      
-    }
+    cout<<ans[i]<<" ";
   }
   cout<<"\n";
 }
