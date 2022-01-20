@@ -6,17 +6,18 @@ ios_base::sync_with_stdio(false);
 cin.tie(NULL);
 typedef long long ll;
 
-ll t;
-cin>>t;
-while(t--)
+ll n,b;
+cin>>n>>b;
+ll ans=0;
+ll add=0;
+while(n-add!=0)
 {
-  ll v;
-  cin>>v;
-  ll n=
-  cout<<n<<"\n";
-  
-  
+  ans+=(n-add);
+  add=n%b;
+  n/=b;
+  n+=add;
+  // cout<<n<<" ";
 }
-
+cout<<ans;
 return 0;
 }
