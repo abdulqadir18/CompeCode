@@ -4,6 +4,7 @@
     "iostream": "cpp",
     "ios": "cpp",
     "random": "cpp",
-    "xutility": "cpp"
+    "xutility": "cpp",
+    "iomanip": "cpp"
   }
 }
