@@ -9,13 +9,34 @@ typedef long long ll;
 ll n;
 cin>>n;
 vector<ll>a(n);
-set<ll>s;
+vector<set<ll>>s;
+set<ll>temp;
 for(ll i=0; i<n; i++)
 {
   cin>>a[i];
-  s.insert(a[i]);
+  if(a[i]==-1)
+  {
+    temp.insert(i+1);
+  }
 }
-cout<<s.size();
 
+ll x=temp.size();
+ll i=1;
+while(x!=n)
+{
+  s.push_back(temp);
+  temp.clear();
+  for(ll j=0; j<a.size(); j++)
+  {
+    auto it=s.back().find(a[j]);
+    if(it!=s.back().end())
+    {
+      temp.insert(j+1);
+    }
+  }
+  x+=temp.size();
+  i++;
+}
+cout<<s.size()+1<<"\n";
 return 0;
 }

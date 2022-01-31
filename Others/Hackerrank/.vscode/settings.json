@@ -3,6 +3,7 @@
     "vector": "cpp",
     "locale": "cpp",
     "regex": "cpp",
-    "xstring": "cpp"
+    "xstring": "cpp",
+    "limits": "cpp"
   }
 }
