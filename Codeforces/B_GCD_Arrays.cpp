@@ -12,35 +12,15 @@ while(t--)
 {
   ll a,b,k;
   cin>>a>>b>>k;
-  if(b-a==0)
+  if(a==b)
   {
-    if(b>1)
-    {
-      cout<<"YES\n";
-    }
-    else
-    {
-      cout<<"NO\n";
-    }
+    (a>1)?cout<<"YES\n":cout<<"NO\n";
   }
   else
   {
-    ll cnt=0;
-    if(((b-a)/2+1)%2==0)
-    {
-      cout<<"YES\n";
-    }
-    else
-    {
-      if(b%2==0)
-      {
-        cout<<"YES\n";
-      }
-      else
-      {
-        cout<<"NO\n";
-      }
-    }
+    ll x;
+    (a%2!=0 && b%2!=0)?x=(b-a+1)/2+1:x=(b-a+1)/2;
+    (k>=x)?cout<<"YES\n":cout<<"NO\n";
   }
 }
 
