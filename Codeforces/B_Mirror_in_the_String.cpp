@@ -16,29 +16,26 @@ while(t--)
   cin>>s;
   string ans;
   ans+=s[0];
-  for(ll i=1; i<n; i++)
+  if(s[0]<=s[1] || n==1)
   {
-    if(s[i]>=s[i-1])
-    {
-      break;
-    }
-    ans+=s[i];
-  }
-  
-  string rev=ans;
-  reverse(rev.begin(),rev.end());
-  ans=ans+rev;
-  if(n==1 || s[1]<=s[0])
-  {
-    string ans2;
-    ans2+=s[0];
-    ans2+=s[0];
-    (ans[1]>=ans2[1])?cout<<ans2<<"\n":cout<<ans<<"\n";
+    cout<<ans<<ans<<"\n";
   }
   else
   {
+    for(ll i=1; i<n; i++)
+    {
+      if(s[i]>s[i-1])
+      {
+        break;
+      }
+      ans+=s[i];
+    }
+    string rev=ans;
+    reverse(rev.begin(),rev.end());
+    ans=ans+rev;
     cout<<ans<<"\n";
   }
+  
 }
 
 return 0;
