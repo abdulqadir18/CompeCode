@@ -3,7 +3,7 @@ using namespace std;
 
 bool ispower(int n)
 {
-  return n&&(!(n&(n-1)));
+  return n&&(!(n&n-1));
 }
 int main()
 {
@@ -17,7 +17,7 @@ while(t--)
   int n;
   cin>>n;
   int k=0;
-  for(int i=n-1; i>=0; i++)
+  for(int i=n-1; i>=0; i--)
   {
     if(ispower(i))
     {
@@ -25,10 +25,10 @@ while(t--)
       break;
     }
   }
-  cout<<k<<"\n";
+  // cout<<k<<"\n";
   int rk=k;
   while(rk--)cout<<rk<<" ";
-  for(int i=k; i<n; i++)cout<<k<<" ";
+  for(int i=k; i<n; i++)cout<<i<<" ";
   cout<<"\n";
 }
 
