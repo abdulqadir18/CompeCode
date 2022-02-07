@@ -7,6 +7,21 @@
     "vector": "cpp",
     "xtree": "cpp",
     "xstring": "cpp",
-    "ostream": "cpp"
+    "ostream": "cpp",
+    "array": "cpp",
+    "deque": "cpp",
+    "forward_list": "cpp",
+    "initializer_list": "cpp",
+    "list": "cpp",
+    "map": "cpp",
+    "queue": "cpp",
+    "regex": "cpp",
+    "scoped_allocator": "cpp",
+    "set": "cpp",
+    "stack": "cpp",
+    "unordered_map": "cpp",
+    "unordered_set": "cpp",
+    "xhash": "cpp",
+    "xmemory": "cpp"
   }
 }
