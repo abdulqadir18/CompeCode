@@ -10,15 +10,10 @@ ll t;
 cin>>t;
 while(t--)
 {
-  ll x,y;
-  cin>>x>>y;
-  ll a,b;
-  cin>>a>>b;
-
-  ll p=min(x,y);
-  ll r=max(x,y);
-  ll q=r-p;
-  cout<<q*a+min(2*p*a,p*b)<<"\n";
+  ll n;
+  cin>>n;
+  ll x=(n-1)/2;
+  cout<<(8*x*(x+1)*(2*x+1))/6<<"\n";
 }
 
 return 0;
