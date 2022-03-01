@@ -25,6 +25,7 @@
     "xmemory": "cpp",
     "utility": "cpp",
     "random": "cpp",
-    "algorithm": "cpp"
+    "algorithm": "cpp",
+    "iomanip": "cpp"
   }
 }
