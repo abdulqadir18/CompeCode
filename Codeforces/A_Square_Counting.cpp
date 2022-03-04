@@ -1,0 +1,19 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+ios_base::sync_with_stdio(false);
+cin.tie(NULL);
+typedef long long ll;
+
+ll t;
+cin>>t;
+while(t--)
+{
+  ll n,s;
+  cin>>n>>s;
+  cout<<s/(n*n)<<"\n";
+}
+
+return 0;
+}
