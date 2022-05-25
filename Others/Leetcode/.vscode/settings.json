@@ -2,6 +2,8 @@
   "files.associations": {
     "iomanip": "cpp",
     "iostream": "cpp",
-    "ios": "cpp"
+    "ios": "cpp",
+    "queue": "cpp",
+    "stack": "cpp"
   }
 }
