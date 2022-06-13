@@ -25,14 +25,6 @@ int main()
     else
     {
       cout<<"Alice\n"<<"Bob\n";
-      // while(a.size() && b.size() && a.back()==b.back())
-      // {
-      //   a.pop_back();
-      //   b.pop_back();
-      // }
-      // if(a.size()==0 && b.size()!=0) cout<<"Alice\n"<<"Bob\n";
-      // else if(a.size()!=0 && b.size()==0) cout<<"Alice\n";
-      // else if(a.size()==0 && b.size()==0) cout<<
     }
   }
   return 0;
